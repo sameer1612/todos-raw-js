@@ -20,7 +20,7 @@ function createList() {
         </div>
       </div>
       <div class="card-body">
-        <div class=d-flex>
+        <div class="d-flex mb-3">
           <input id="item-name" class="form-control w-75 me-3" name="item-name">
           <button class="btn btn-success" onclick="createItem('${listId}')">+ Item</button>
         </div>
@@ -44,7 +44,7 @@ function deleteItem(itemId) {
 }
 
 function createItemId(listId) {
-  return `${listId}-item-` + document.querySelectorAll(`#${listId} .item`).length;
+  return `${listId}-item-` + document.querySelector("#" + listId + " .items").childElementCount;
 }
 
 function createItem(listId) {
